@@ -4,35 +4,35 @@ using System.Collections.Generic;
 namespace Mocks
 {
     /// <summary>
-    /// API для работы с конкретным отелем
+    /// API РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РєРѕРЅРєСЂРµС‚РЅС‹Рј РѕС‚РµР»РµРј
     /// </summary>
     public interface IHotelApi
     {
         /// <summary>
-        /// Информация об отеле, с которым работает API
+        /// РРЅС„РѕСЂРјР°С†РёСЏ РѕР± РѕС‚РµР»Рµ, СЃ РєРѕС‚РѕСЂС‹Рј СЂР°Р±РѕС‚Р°РµС‚ API
         /// </summary>
         Hotel Hotel { get; }
 
         /// <summary>
-        /// Возвращает список всех имеющихся в отеле номеров
+        /// Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РІСЃРµС… РёРјРµСЋС‰РёС…СЃСЏ РІ РѕС‚РµР»Рµ РЅРѕРјРµСЂРѕРІ
         /// </summary>
         List<Room> GetRooms();
 
         /// <summary>
-        /// Проверяет доступность номера указанного класса на указанную дату
+        /// РџСЂРѕРІРµСЂСЏРµС‚ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РЅРѕРјРµСЂР° СѓРєР°Р·Р°РЅРЅРѕРіРѕ РєР»Р°СЃСЃР° РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ
         /// </summary>
-        /// <param name="roomClass">Класс номера</param>
-        /// <param name="date">Дата</param>
-        /// <returns>Признак доступности номера для бронирования</returns>
+        /// <param name="roomClass">РљР»Р°СЃСЃ РЅРѕРјРµСЂР°</param>
+        /// <param name="date">Р”Р°С‚Р°</param>
+        /// <returns>РџСЂРёР·РЅР°Рє РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РЅРѕРјРµСЂР° РґР»СЏ Р±СЂРѕРЅРёСЂРѕРІР°РЅРёСЏ</returns>
         bool CheckAvailability(string roomClass, DateTime date);
 
         /// <summary>
-        /// Отправляет в отель заявку на бронирование номера
+        /// РћС‚РїСЂР°РІР»СЏРµС‚ РІ РѕС‚РµР»СЊ Р·Р°СЏРІРєСѓ РЅР° Р±СЂРѕРЅРёСЂРѕРІР°РЅРёРµ РЅРѕРјРµСЂР°
         /// </summary>
-        /// <param name="roomClass">Класс номера</param>
-        /// <param name="arrivalDate">Дата заселения</param>
-        /// <param name="departureDate">Дата выселения</param>
-        /// <param name="persons">Количество гостей</param>
+        /// <param name="roomClass">РљР»Р°СЃСЃ РЅРѕРјРµСЂР°</param>
+        /// <param name="arrivalDate">Р”Р°С‚Р° Р·Р°СЃРµР»РµРЅРёСЏ</param>
+        /// <param name="departureDate">Р”Р°С‚Р° РІС‹СЃРµР»РµРЅРёСЏ</param>
+        /// <param name="persons">РљРѕР»РёС‡РµСЃС‚РІРѕ РіРѕСЃС‚РµР№</param>
         void Reserve(string roomClass, DateTime arrivalDate, DateTime departureDate, int persons);
     }
 }

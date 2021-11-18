@@ -1,17 +1,17 @@
 namespace Mocks
 {
     /// <summary>
-    /// Информация об отеле
+    /// РРЅС„РѕСЂРјР°С†РёСЏ РѕР± РѕС‚РµР»Рµ
     /// </summary>
     public record Hotel
     {
         /// <summary>
-        /// Название отеля
+        /// РќР°Р·РІР°РЅРёРµ РѕС‚РµР»СЏ
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// Адрес отеля
+        /// РђРґСЂРµСЃ РѕС‚РµР»СЏ
         /// </summary>
         public string Address { get; set; }
     }
