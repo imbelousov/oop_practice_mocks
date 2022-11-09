@@ -24,7 +24,7 @@ namespace Mocks
         /// <param name="roomClass">Класс номера</param>
         /// <param name="date">Дата</param>
         /// <returns>Признак доступности номера для бронирования</returns>
-        bool CheckAvailability(string roomClass, DateTime date);
+        bool CheckAvailability(RoomClass roomClass, DateTime date);
 
         /// <summary>
         /// Отправляет в отель заявку на бронирование номера
@@ -33,6 +33,6 @@ namespace Mocks
         /// <param name="arrivalDate">Дата заселения</param>
         /// <param name="departureDate">Дата выселения</param>
         /// <param name="persons">Количество гостей</param>
-        void Reserve(string roomClass, DateTime arrivalDate, DateTime departureDate, int persons);
+        void Reserve(RoomClass roomClass, DateTime arrivalDate, DateTime departureDate, int persons);
     }
 }

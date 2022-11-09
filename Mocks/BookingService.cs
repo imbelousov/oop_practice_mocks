@@ -25,10 +25,10 @@ namespace Mocks
             return hotels;
         }
 
-        public bool Reserve(Hotel hotel, string roomClass, DateTime arrivalDate, DateTime departureDate, int persons)
+        public bool Reserve(Hotel hotel, RoomClass roomClass, DateTime arrivalDate, DateTime departureDate, int persons)
         {
             var hotelApi = FindApi(hotel);
-            var room = hotelApi.GetRooms().FirstOrDefault(x => x.Class == roomClass);
+            var room = hotelApi.GetRooms().FirstOrDefault(x => x.Class == roomClass && x.Persons >= persons);
             if (room == null || !IsAvailable(room, hotelApi, arrivalDate, departureDate))
                 return false;
             hotelApi.Reserve(roomClass, arrivalDate, departureDate, persons);

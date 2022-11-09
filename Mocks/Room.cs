@@ -8,7 +8,7 @@ namespace Mocks
         /// <summary>
         /// Класс номера
         /// </summary>
-        public string Class { get; set; }
+        public RoomClass Class { get; set; }
 
         /// <summary>
         /// Максимальное число гостей, которые могут проживать в номере
